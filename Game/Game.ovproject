@@ -1,0 +1,12 @@
+executable_name=Cargo
+gravity=-25.000000
+x_resolution=1920
+multisampling=true
+y_resolution=1080
+start_scene=Scenes\Menu.ovscene
+fullscreen=true
+vsync=true
+samples=2
+opengl_major=4
+opengl_minor=3
+dev_build=false
