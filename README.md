@@ -30,3 +30,14 @@ You are the sole survivor, taking refuge on a space cargo ship for the past two 
 Until now...
 
 ---
+
+# 2. Details
+## 2.1. Requirements
+Overload requires:
+- RAM: 200MB
+- OS: Windows 7
+- GPU: Graphics card supporting OpenGL 4.3
+- CPU: x64
+
+## 2.2. Licence
+Cargo Demo is licenced under an MIT licence.
