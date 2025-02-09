@@ -40,4 +40,17 @@ Overload requires:
 - CPU: x64
 
 ## 2.2. Licence
-Cargo Demo is licenced under an MIT licence.
+This project contains:
+1. **Scripts**:
+- Licenced under an MIT licence.
+
+2. **Assets (Textures, Sounds, Models)**:  
+- The licensing status of some assets in this repository is **unclear or undetermined**. These assets were sourced from various locations on the internet, and we are currently in the process of identifying their original licenses.
+- If you recognize any of these assets or their source, please contact us so we can provide proper credit or remove them if necessary.  
+
+### Usage Disclaimer
+If you wish to use the assets in this repository, please ensure that you:
+- Confirm the licensing and attribution requirements for each asset independently.
+- Replace the assets with ones you own or have the proper rights to use if you are uncertain about their legal status.
+
+The maintainers of this repository **are not responsible for any copyright issues** arising from the use of these assets.
