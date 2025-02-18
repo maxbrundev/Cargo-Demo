@@ -2,7 +2,7 @@
     <shader>:Shaders\StandardPBR.ovfx</shader>
     <settings>
         <blendable>false</blendable>
-        <backface_culling>true</backface_culling>
+        <backface_culling>false</backface_culling>
         <frontface_culling>false</frontface_culling>
         <depth_test>true</depth_test>
         <depth_writing>true</depth_writing>

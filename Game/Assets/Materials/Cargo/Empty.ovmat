@@ -4,9 +4,9 @@
         <blendable>false</blendable>
         <backface_culling>false</backface_culling>
         <frontface_culling>false</frontface_culling>
-        <depth_test>true</depth_test>
-        <depth_writing>true</depth_writing>
-        <color_writing>true</color_writing>
+        <depth_test>false</depth_test>
+        <depth_writing>false</depth_writing>
+        <color_writing>false</color_writing>
         <cast_shadows>false</cast_shadows>
         <receive_shadows>false</receive_shadows>
         <gpu_instances>0</gpu_instances>

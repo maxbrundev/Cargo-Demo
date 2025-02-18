@@ -22,23 +22,23 @@
         <uniform>
             <name>u_Albedo</name>
             <value>
-                <x>1</x>
-                <y>1</y>
-                <z>1</z>
+                <x>0.25098038</x>
+                <y>0.25097787</y>
+                <z>0.25097787</z>
                 <w>1</w>
             </value>
         </uniform>
         <uniform>
             <name>u_AlbedoMap</name>
-            <value>Textures\Map\Diffuse_01.png</value>
+            <value>Textures\Map\Neon_Diffuse.jpg</value>
         </uniform>
         <uniform>
             <name>u_AmbientOcclusionMap</name>
-            <value>Textures\Map\Ambient_01.png</value>
+            <value>?</value>
         </uniform>
         <uniform>
             <name>u_EnableNormalMapping</name>
-            <value>1</value>
+            <value>0</value>
         </uniform>
         <uniform>
             <name>u_HeightMap</name>
@@ -58,11 +58,11 @@
         </uniform>
         <uniform>
             <name>u_MetallicMap</name>
-            <value>Textures\Map\Metallic.png</value>
+            <value>?</value>
         </uniform>
         <uniform>
             <name>u_NormalMap</name>
-            <value>Textures\Map\Normal_01.png</value>
+            <value>?</value>
         </uniform>
         <uniform>
             <name>u_Roughness</name>
@@ -70,7 +70,7 @@
         </uniform>
         <uniform>
             <name>u_RoughnessMap</name>
-            <value>Textures\Map\Roughness.png</value>
+            <value>?</value>
         </uniform>
         <uniform>
             <name>u_TextureOffset</name>

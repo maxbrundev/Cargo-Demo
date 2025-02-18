@@ -15,17 +15,17 @@
         <uniform>
             <name>u_CosinAmplitude</name>
             <value>
-                <x>0.5</x>
-                <y>1</y>
-                <z>0.92000002</z>
+                <x>0.25</x>
+                <y>4.0300002</y>
+                <z>1</z>
             </value>
         </uniform>
         <uniform>
             <name>u_CosinFrequency</name>
             <value>
-                <x>3</x>
-                <y>2</y>
-                <z>0.5</z>
+                <x>10</x>
+                <y>10</y>
+                <z>2</z>
             </value>
         </uniform>
         <uniform>
@@ -48,15 +48,15 @@
         <uniform>
             <name>u_Spacing</name>
             <value>
-                <x>0.30000001</x>
+                <x>0.2</x>
                 <y>0</y>
-                <z>0.49000001</z>
+                <z>0.2</z>
             </value>
         </uniform>
         <uniform>
             <name>u_TextureOffset</name>
             <value>
-                <x>1</x>
+                <x>0</x>
                 <y>0</y>
             </value>
         </uniform>
@@ -71,7 +71,7 @@
             <name>u_Velocity</name>
             <value>
                 <x>0</x>
-                <y>0.30000001</y>
+                <y>8</y>
                 <z>0</z>
             </value>
         </uniform>

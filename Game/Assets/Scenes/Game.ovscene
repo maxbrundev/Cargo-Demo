@@ -86,7 +86,7 @@
                 </behaviours>
             </actor>
             <actor>
-                <name>Level_Map_01</name>
+                <name>Walls</name>
                 <tag></tag>
                 <active>true</active>
                 <id>16</id>
@@ -109,7 +109,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\Neon.ovmat</material>
                                 <material>Materials\Map\Glass_PBR.ovmat</material>
                             </materials>
@@ -140,7 +140,7 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Level_Map_03</name>
+                <name>Walls</name>
                 <tag></tag>
                 <active>true</active>
                 <id>18</id>
@@ -163,8 +163,8 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
-                                <material>Materials\Map\Neon.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
+                                <material>Materials\Map\Neon Off.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -193,7 +193,7 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Level_Map_02</name>
+                <name>Walls</name>
                 <tag></tag>
                 <active>true</active>
                 <id>20</id>
@@ -216,7 +216,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\Neon.ovmat</material>
                             </materials>
                         </data>
@@ -246,11 +246,11 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Level_Module_01</name>
+                <name>Zone A</name>
                 <tag></tag>
                 <active>true</active>
                 <id>21</id>
-                <parent>0</parent>
+                <parent>443</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -277,11 +277,11 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Level_Module_02</name>
+                <name>Zone B</name>
                 <tag></tag>
                 <active>true</active>
                 <id>22</id>
-                <parent>0</parent>
+                <parent>443</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -308,11 +308,11 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Level_Module_03</name>
+                <name>Zone C</name>
                 <tag></tag>
                 <active>true</active>
                 <id>23</id>
-                <parent>0</parent>
+                <parent>443</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -343,7 +343,7 @@
                 <tag></tag>
                 <active>true</active>
                 <id>24</id>
-                <parent>21</parent>
+                <parent>450</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -380,11 +380,11 @@
                         <type>class OvCore::ECS::Components::CPointLight</type>
                         <data>
                             <color>
-                                <x>0</x>
-                                <y>0.84710312</y>
+                                <x>0.49019605</x>
+                                <y>0.92206943</y>
                                 <z>1</z>
                             </color>
-                            <intensity>1</intensity>
+                            <intensity>5</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>1</quadratic>
@@ -425,11 +425,11 @@
                         <type>class OvCore::ECS::Components::CPointLight</type>
                         <data>
                             <color>
-                                <x>0</x>
-                                <y>0.84348392</y>
+                                <x>0.54117644</x>
+                                <y>0.92819142</y>
                                 <z>1</z>
                             </color>
-                            <intensity>1</intensity>
+                            <intensity>3</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>1</quadratic>
@@ -464,7 +464,7 @@
                 <tag></tag>
                 <active>true</active>
                 <id>27</id>
-                <parent>22</parent>
+                <parent>451</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -1242,11 +1242,11 @@
                 </behaviours>
             </actor>
             <actor>
-                <name>Colliders_01</name>
+                <name>Colliders</name>
                 <tag></tag>
                 <active>true</active>
                 <id>63</id>
-                <parent>291</parent>
+                <parent>21</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -2897,11 +2897,11 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Colliders_02</name>
+                <name>Colliders</name>
                 <tag></tag>
                 <active>true</active>
                 <id>97</id>
-                <parent>291</parent>
+                <parent>22</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -5500,11 +5500,11 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Colliders_03</name>
+                <name>Colliders</name>
                 <tag></tag>
                 <active>true</active>
                 <id>147</id>
-                <parent>291</parent>
+                <parent>23</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -7357,42 +7357,11 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Gates Manager</name>
-                <tag></tag>
-                <active>true</active>
-                <id>183</id>
-                <parent>0</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Gate 1</name>
+                <name>Door A --&gt; B</name>
                 <tag></tag>
                 <active>true</active>
                 <id>184</id>
-                <parent>183</parent>
+                <parent>443</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -7442,7 +7411,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\Glass_PBR.ovmat</material>
                             </materials>
                         </data>
@@ -7500,7 +7469,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\Neon.ovmat</material>
                             </materials>
                         </data>
@@ -7553,7 +7522,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -7706,7 +7675,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\Neon.ovmat</material>
                             </materials>
                         </data>
@@ -7930,7 +7899,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -8268,7 +8237,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\Glass_PBR.ovmat</material>
                             </materials>
                         </data>
@@ -8352,7 +8321,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\Glass_PBR.ovmat</material>
                             </materials>
                         </data>
@@ -8573,7 +8542,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\Glass_PBR.ovmat</material>
                             </materials>
                         </data>
@@ -8603,11 +8572,11 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Gate 2</name>
+                <name>Door B --&gt; C</name>
                 <tag></tag>
                 <active>true</active>
                 <id>222</id>
-                <parent>183</parent>
+                <parent>443</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -8644,7 +8613,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\Glass_PBR.ovmat</material>
                             </materials>
                         </data>
@@ -8759,7 +8728,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\Neon.ovmat</material>
                             </materials>
                         </data>
@@ -8926,7 +8895,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -9048,7 +9017,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\Neon.ovmat</material>
                             </materials>
                         </data>
@@ -9215,7 +9184,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -9417,7 +9386,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\Glass_PBR.ovmat</material>
                             </materials>
                         </data>
@@ -9598,7 +9567,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\Glass_PBR.ovmat</material>
                             </materials>
                         </data>
@@ -9713,7 +9682,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\EndNeon.ovmat</material>
                             </materials>
                         </data>
@@ -9880,7 +9849,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -9976,7 +9945,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\EndNeon.ovmat</material>
                             </materials>
                         </data>
@@ -10143,7 +10112,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -10345,7 +10314,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                                 <material>Materials\Map\Glass_PBR.ovmat</material>
                             </materials>
                         </data>
@@ -10392,7 +10361,7 @@
                 <tag></tag>
                 <active>true</active>
                 <id>257</id>
-                <parent>0</parent>
+                <parent>22</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -10492,7 +10461,7 @@
                         <data>
                             <materials>
                                 <material>Materials\Items\Trigger.ovmat</material>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -10651,7 +10620,7 @@
                         <data>
                             <materials>
                                 <material>Materials\Items\LargeTrigger.ovmat</material>
-                                <material>Materials\Map\Base_PBR.ovmat</material>
+                                <material>Materials\Map\Base.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -10684,7 +10653,7 @@
                 <tag></tag>
                 <active>true</active>
                 <id>267</id>
-                <parent>0</parent>
+                <parent>23</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -11098,7 +11067,7 @@
                 <tag></tag>
                 <active>true</active>
                 <id>274</id>
-                <parent>21</parent>
+                <parent>338</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CAudioSource</type>
@@ -11168,7 +11137,7 @@
                 <tag></tag>
                 <active>true</active>
                 <id>275</id>
-                <parent>21</parent>
+                <parent>338</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
@@ -11369,58 +11338,6 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Lava Particles</name>
-                <tag></tag>
-                <active>true</active>
-                <id>278</id>
-                <parent>22</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CMaterialRenderer</type>
-                        <data>
-                            <materials>
-                                <material>Materials\FX\LavaParticles.ovmat</material>
-                            </materials>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CModelRenderer</type>
-                        <data>
-                            <model>Models\Shapes\vplane.fbx</model>
-                            <frustum_behaviour>1</frustum_behaviour>
-                            <custom_bounding_sphere_position>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </custom_bounding_sphere_position>
-                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>20.65</x>
-                                <y>-3.55</y>
-                                <z>-6.6999998</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>0.07</x>
-                                <y>0.07</y>
-                                <z>0.07</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
                 <name>Light Cube Green</name>
                 <tag>LightCube</tag>
                 <active>true</active>
@@ -11526,7 +11443,7 @@
                 <tag></tag>
                 <active>true</active>
                 <id>280</id>
-                <parent>0</parent>
+                <parent>445</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -11823,11 +11740,11 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Enigma Boxes</name>
+                <name>Movable Boxes</name>
                 <tag></tag>
                 <active>true</active>
                 <id>287</id>
-                <parent>0</parent>
+                <parent>21</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -12001,37 +11918,6 @@
                 </behaviours>
             </actor>
             <actor>
-                <name>Colliders</name>
-                <tag></tag>
-                <active>true</active>
-                <id>291</id>
-                <parent>0</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
                 <name>UIManager</name>
                 <tag></tag>
                 <active>true</active>
@@ -12195,7 +12081,7 @@
                 <tag>Throwable</tag>
                 <active>true</active>
                 <id>297</id>
-                <parent>0</parent>
+                <parent>22</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CAudioSource</type>
@@ -12411,7 +12297,7 @@
                 <tag></tag>
                 <active>true</active>
                 <id>304</id>
-                <parent>0</parent>
+                <parent>22</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CAudioSource</type>
@@ -12758,7 +12644,7 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Broken Cargo</name>
+                <name>Cargo</name>
                 <tag></tag>
                 <active>true</active>
                 <id>312</id>
@@ -12793,7 +12679,7 @@
                 <tag></tag>
                 <active>true</active>
                 <id>314</id>
-                <parent>291</parent>
+                <parent>63</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -13133,13 +13019,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
-                            <frustum_behaviour>1</frustum_behaviour>
+                            <frustum_behaviour>3</frustum_behaviour>
                             <custom_bounding_sphere_position>
                                 <x>0</x>
                                 <y>0</y>
                                 <z>0</z>
                             </custom_bounding_sphere_position>
-                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
+                            <custom_bounding_sphere_radius>10</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -13231,19 +13117,19 @@
                 <tag></tag>
                 <active>true</active>
                 <id>323</id>
-                <parent>21</parent>
+                <parent>450</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
-                            <frustum_behaviour>1</frustum_behaviour>
+                            <frustum_behaviour>3</frustum_behaviour>
                             <custom_bounding_sphere_position>
                                 <x>0</x>
                                 <y>0</y>
                                 <z>0</z>
                             </custom_bounding_sphere_position>
-                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
+                            <custom_bounding_sphere_radius>20</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -13443,7 +13329,7 @@
                 <tag></tag>
                 <active>true</active>
                 <id>327</id>
-                <parent>0</parent>
+                <parent>445</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -13493,13 +13379,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
-                            <frustum_behaviour>1</frustum_behaviour>
+                            <frustum_behaviour>3</frustum_behaviour>
                             <custom_bounding_sphere_position>
                                 <x>0</x>
                                 <y>0</y>
                                 <z>0</z>
                             </custom_bounding_sphere_position>
-                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
+                            <custom_bounding_sphere_radius>10</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -13836,7 +13722,7 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Decoration</name>
+                <name>Decorations</name>
                 <tag></tag>
                 <active>true</active>
                 <id>338</id>
@@ -13871,7 +13757,7 @@
                 <tag></tag>
                 <active>true</active>
                 <id>339</id>
-                <parent>0</parent>
+                <parent>445</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -13965,13 +13851,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
-                            <frustum_behaviour>1</frustum_behaviour>
+                            <frustum_behaviour>3</frustum_behaviour>
                             <custom_bounding_sphere_position>
                                 <x>0</x>
                                 <y>0</y>
                                 <z>0</z>
                             </custom_bounding_sphere_position>
-                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
+                            <custom_bounding_sphere_radius>10</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -14439,19 +14325,19 @@
                 <tag></tag>
                 <active>true</active>
                 <id>352</id>
-                <parent>22</parent>
+                <parent>451</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
-                            <frustum_behaviour>0</frustum_behaviour>
+                            <frustum_behaviour>3</frustum_behaviour>
                             <custom_bounding_sphere_position>
-                                <x>0</x>
+                                <x>2</x>
                                 <y>0</y>
-                                <z>0</z>
+                                <z>5</z>
                             </custom_bounding_sphere_position>
-                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
+                            <custom_bounding_sphere_radius>8</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -14694,7 +14580,7 @@
                 <tag></tag>
                 <active>true</active>
                 <id>359</id>
-                <parent>0</parent>
+                <parent>22</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CPhysicalSphere</type>
@@ -15391,14 +15277,14 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
-                            <frustum_behaviour>1</frustum_behaviour>
+                            <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>3</frustum_behaviour>
                             <custom_bounding_sphere_position>
                                 <x>0</x>
                                 <y>0</y>
-                                <z>0</z>
+                                <z>5</z>
                             </custom_bounding_sphere_position>
-                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
+                            <custom_bounding_sphere_radius>7</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -17603,11 +17489,11 @@
                         <type>class OvCore::ECS::Components::CPointLight</type>
                         <data>
                             <color>
-                                <x>0</x>
-                                <y>0.84348392</y>
+                                <x>0.38039213</x>
+                                <y>0.90303349</y>
                                 <z>1</z>
                             </color>
-                            <intensity>1</intensity>
+                            <intensity>5</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>1</quadratic>
@@ -17620,6 +17506,417 @@
                                 <x>9.9196873</x>
                                 <y>3.2750001</y>
                                 <z>1.6827838</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>Neon 1</name>
+                <tag></tag>
+                <active>true</active>
+                <id>437</id>
+                <parent>438</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CPointLight</type>
+                        <data>
+                            <color>
+                                <x>0.51372552</x>
+                                <y>0.9239018</y>
+                                <z>1</z>
+                            </color>
+                            <intensity>1</intensity>
+                            <constant>0</constant>
+                            <linear>0</linear>
+                            <quadratic>1</quadratic>
+                        </data>
+                    </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>19.78965</x>
+                                <y>3.2289138</y>
+                                <z>2.9295483</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>Lights</name>
+                <tag></tag>
+                <active>true</active>
+                <id>438</id>
+                <parent>452</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>Neon 2</name>
+                <tag></tag>
+                <active>true</active>
+                <id>439</id>
+                <parent>438</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CPointLight</type>
+                        <data>
+                            <color>
+                                <x>0.5529412</x>
+                                <y>0.93004131</y>
+                                <z>1</z>
+                            </color>
+                            <intensity>1</intensity>
+                            <constant>0</constant>
+                            <linear>0</linear>
+                            <quadratic>1</quadratic>
+                        </data>
+                    </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>28.78965</x>
+                                <y>3.2289138</y>
+                                <z>2.9295483</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>Neon 3</name>
+                <tag></tag>
+                <active>true</active>
+                <id>440</id>
+                <parent>438</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CPointLight</type>
+                        <data>
+                            <color>
+                                <x>0.51372552</x>
+                                <y>0.92390728</y>
+                                <z>1</z>
+                            </color>
+                            <intensity>1</intensity>
+                            <constant>0</constant>
+                            <linear>0</linear>
+                            <quadratic>1</quadratic>
+                        </data>
+                    </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>25.851421</x>
+                                <y>3.2289138</y>
+                                <z>-3.1075001</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>Neon 4</name>
+                <tag></tag>
+                <active>true</active>
+                <id>441</id>
+                <parent>438</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CPointLight</type>
+                        <data>
+                            <color>
+                                <x>0.5333333</x>
+                                <y>0.9277904</y>
+                                <z>1</z>
+                            </color>
+                            <intensity>1</intensity>
+                            <constant>0</constant>
+                            <linear>0</linear>
+                            <quadratic>1</quadratic>
+                        </data>
+                    </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>25.794756</x>
+                                <y>3.2289138</y>
+                                <z>8.9192991</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>Lava Lampsd</name>
+                <tag></tag>
+                <active>true</active>
+                <id>442</id>
+                <parent>438</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CPointLight</type>
+                        <data>
+                            <color>
+                                <x>1</x>
+                                <y>0.35547841</y>
+                                <z>0.0039215684</z>
+                            </color>
+                            <intensity>1</intensity>
+                            <constant>0</constant>
+                            <linear>0</linear>
+                            <quadratic>0.050000001</quadratic>
+                        </data>
+                    </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>24.500341</x>
+                                <y>-5.0838823</y>
+                                <z>2.4217749</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>---- LEVEL DESIGN ----</name>
+                <tag></tag>
+                <active>true</active>
+                <id>443</id>
+                <parent>0</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>---- SYSTEMS ----</name>
+                <tag></tag>
+                <active>true</active>
+                <id>445</id>
+                <parent>0</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>VFX</name>
+                <tag></tag>
+                <active>true</active>
+                <id>450</id>
+                <parent>21</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>VFX</name>
+                <tag></tag>
+                <active>true</active>
+                <id>451</id>
+                <parent>22</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>VFX</name>
+                <tag></tag>
+                <active>true</active>
+                <id>452</id>
+                <parent>23</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
                             </position>
                             <rotation>
                                 <x>0</x>
