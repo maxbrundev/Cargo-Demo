@@ -1,5 +1,5 @@
 <root>
-    <shader>Shaders\UI_Blink.glsl</shader>
+    <shader>Shaders\UI_Blink.ovfx</shader>
     <settings>
         <blendable>true</blendable>
         <backface_culling>true</backface_culling>
@@ -7,6 +7,8 @@
         <depth_test>true</depth_test>
         <depth_writing>true</depth_writing>
         <color_writing>true</color_writing>
+        <cast_shadows>false</cast_shadows>
+        <receive_shadows>false</receive_shadows>
         <gpu_instances>1</gpu_instances>
     </settings>
     <uniforms>

@@ -37,7 +37,7 @@ function Physics_WallPlatformTrigger:Move(deltaTime)
     self.body:GetTransform():SetPosition(Vector3.Lerp(self.body:GetTransform():GetLocalPosition(), targetPosition, 20 * deltaTime))
 end 
 
-function Physics_WallPlatformTrigger:OnTriggerStart(other)
+function Physics_WallPlatformTrigger:OnTriggerEnter(other)
     if other:GetOwner():GetTag() ~= "Lightweight" then
         self.triggerCounter = self.triggerCounter + 1
         if self.triggerCounter == 1 then
@@ -49,7 +49,7 @@ function Physics_WallPlatformTrigger:OnTriggerStart(other)
     end
 end
 
-function Physics_WallPlatformTrigger:OnTriggerStop(other)
+function Physics_WallPlatformTrigger:OnTriggerExit(other)
     if other:GetOwner():GetTag() ~= "Lightweight" then
         self.triggerCounter = self.triggerCounter - 1
         if self.triggerCounter == 0 then

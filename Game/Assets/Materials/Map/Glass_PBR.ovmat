@@ -1,5 +1,5 @@
 <root>
-    <shader>:Shaders\StandardPBR.glsl</shader>
+    <shader>:Shaders\StandardPBR.ovfx</shader>
     <settings>
         <blendable>false</blendable>
         <backface_culling>true</backface_culling>
@@ -7,16 +7,25 @@
         <depth_test>true</depth_test>
         <depth_writing>true</depth_writing>
         <color_writing>true</color_writing>
+        <cast_shadows>false</cast_shadows>
+        <receive_shadows>false</receive_shadows>
         <gpu_instances>1</gpu_instances>
     </settings>
     <uniforms>
         <uniform>
+            <name>_LightSpaceMatrix</name>
+        </uniform>
+        <uniform>
+            <name>_ShadowMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
             <name>u_Albedo</name>
             <value>
-                <x>0</x>
-                <y>0.20779645</y>
-                <z>0.41960782</z>
-                <w>1</w>
+                <x>0.19215687</x>
+                <y>0.59215689</y>
+                <z>1</z>
+                <w>0.49019608</w>
             </value>
         </uniform>
         <uniform>
@@ -29,11 +38,23 @@
         </uniform>
         <uniform>
             <name>u_EnableNormalMapping</name>
-            <value>1</value>
+            <value>0</value>
+        </uniform>
+        <uniform>
+            <name>u_HeightMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
+            <name>u_HeightScale</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
+            <name>u_MaskMap</name>
+            <value>?</value>
         </uniform>
         <uniform>
             <name>u_Metallic</name>
-            <value>0</value>
+            <value>1</value>
         </uniform>
         <uniform>
             <name>u_MetallicMap</name>
@@ -45,7 +66,7 @@
         </uniform>
         <uniform>
             <name>u_Roughness</name>
-            <value>0.2</value>
+            <value>1</value>
         </uniform>
         <uniform>
             <name>u_RoughnessMap</name>

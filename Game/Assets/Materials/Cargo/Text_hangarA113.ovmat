@@ -1,5 +1,5 @@
 <root>
-    <shader>:Shaders\Unlit.glsl</shader>
+    <shader>:Shaders\Unlit.ovfx</shader>
     <settings>
         <blendable>false</blendable>
         <backface_culling>true</backface_culling>
@@ -7,14 +7,16 @@
         <depth_test>true</depth_test>
         <depth_writing>true</depth_writing>
         <color_writing>true</color_writing>
+        <cast_shadows>false</cast_shadows>
+        <receive_shadows>false</receive_shadows>
         <gpu_instances>1</gpu_instances>
     </settings>
     <uniforms>
         <uniform>
             <name>u_Diffuse</name>
             <value>
-                <x>0.72156858</x>
-                <y>0.71307886</y>
+                <x>2</x>
+                <y>2</y>
                 <z>0</z>
                 <w>1</w>
             </value>

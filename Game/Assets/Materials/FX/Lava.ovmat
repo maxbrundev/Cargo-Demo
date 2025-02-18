@@ -1,5 +1,5 @@
 <root>
-    <shader>Shaders\Fluid.glsl</shader>
+    <shader>Shaders\Fluid.ovfx</shader>
     <settings>
         <blendable>false</blendable>
         <backface_culling>true</backface_culling>
@@ -7,25 +7,38 @@
         <depth_test>true</depth_test>
         <depth_writing>true</depth_writing>
         <color_writing>true</color_writing>
+        <cast_shadows>false</cast_shadows>
+        <receive_shadows>false</receive_shadows>
         <gpu_instances>1</gpu_instances>
     </settings>
     <uniforms>
         <uniform>
-            <name>u_Amplitude</name>
-            <value>0.050000001</value>
+            <name>_LightSpaceMatrix</name>
         </uniform>
         <uniform>
-            <name>u_Diffuse</name>
+            <name>_ShadowMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
+            <name>u_Albedo</name>
             <value>
-                <x>1</x>
+                <x>10</x>
                 <y>1</y>
                 <z>1</z>
                 <w>1</w>
             </value>
         </uniform>
         <uniform>
-            <name>u_DiffuseMap</name>
+            <name>u_AlbedoMap</name>
             <value>Textures\Lava\Lava_005_COLOR.jpg</value>
+        </uniform>
+        <uniform>
+            <name>u_AmbientOcclusionMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
+            <name>u_Amplitude</name>
+            <value>0.050000001</value>
         </uniform>
         <uniform>
             <name>u_Disparity</name>
@@ -52,24 +65,31 @@
             <value>?</value>
         </uniform>
         <uniform>
+            <name>u_Metallic</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
+            <name>u_MetallicMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
             <name>u_NormalMap</name>
             <value>Textures\Lava\Lava_005_NORM.jpg</value>
         </uniform>
         <uniform>
-            <name>u_Shininess</name>
-            <value>100</value>
+            <name>u_Roughness</name>
+            <value>0</value>
         </uniform>
         <uniform>
-            <name>u_Specular</name>
-            <value>
-                <x>1</x>
-                <y>1</y>
-                <z>1</z>
-            </value>
-        </uniform>
-        <uniform>
-            <name>u_SpecularMap</name>
+            <name>u_RoughnessMap</name>
             <value>?</value>
+        </uniform>
+        <uniform>
+            <name>u_TextureOffset</name>
+            <value>
+                <x>0</x>
+                <y>0</y>
+            </value>
         </uniform>
         <uniform>
             <name>u_TextureTiling</name>

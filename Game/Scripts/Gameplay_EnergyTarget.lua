@@ -22,7 +22,7 @@ end
 function Gameplay_EnergyTarget:OnUpdate(deltaTime)
 end
 
-function Gameplay_EnergyTarget:OnTriggerStart(other)
+function Gameplay_EnergyTarget:OnTriggerEnter(other)
     if other:GetOwner():GetName() == "ElecBall" then
         self.lavaPlatform:Activate()
         other:GetOwner():SetActive(false)

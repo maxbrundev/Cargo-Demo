@@ -12,6 +12,7 @@
                         <type>class OvCore::ECS::Components::CCamera</type>
                         <data>
                             <fov>55</fov>
+                            <size>-1.0737418e+08</size>
                             <near>0.001</near>
                             <far>1000</far>
                             <clear_color>
@@ -19,11 +20,37 @@
                                 <y>9.9999386e-07</y>
                                 <z>1e-06</z>
                             </clear_color>
+                            <frustum_geometry_culling>true</frustum_geometry_culling>
+                            <frustum_light_culling>true</frustum_light_culling>
+                            <projection_mode>1</projection_mode>
                         </data>
                     </component>
                     <component>
                         <type>class OvCore::ECS::Components::CAudioListener</type>
                         <data/>
+                    </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CPostProcessStack</type>
+                        <data>
+                            <bloom_enabled>true</bloom_enabled>
+                            <bloom_threshold>0.89999998</bloom_threshold>
+                            <bloom_radius>1</bloom_radius>
+                            <bloom_kernel_size>6</bloom_kernel_size>
+                            <bloom_intensity>1</bloom_intensity>
+                            <auto_exposure_enabled>true</auto_exposure_enabled>
+                            <auto_exposure_center_weight_bias>0.5</auto_exposure_center_weight_bias>
+                            <auto_exposure_luminance_min>-2</auto_exposure_luminance_min>
+                            <auto_exposure_luminance_max>16</auto_exposure_luminance_max>
+                            <auto_exposure_exposure_compensation>0</auto_exposure_exposure_compensation>
+                            <auto_exposure_progressive>true</auto_exposure_progressive>
+                            <auto_exposure_speed_up>1</auto_exposure_speed_up>
+                            <auto_exposure_speed_down>1</auto_exposure_speed_down>
+                            <tonemapping_enabled>true</tonemapping_enabled>
+                            <tonemapping_exposure>1</tonemapping_exposure>
+                            <tonemapping_mode>0</tonemapping_mode>
+                            <tonemapping_gamma_correction>true</tonemapping_gamma_correction>
+                            <fxaa_enabled>true</fxaa_enabled>
+                        </data>
                     </component>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
@@ -69,6 +96,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Architecture\LevelMap_01_Broken.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -76,7 +110,7 @@
                         <data>
                             <materials>
                                 <material>Materials\Map\Base_PBR.ovmat</material>
-                                <material>Materials\Map\Neon_PBR.ovmat</material>
+                                <material>Materials\Map\Neon.ovmat</material>
                                 <material>Materials\Map\Glass_PBR.ovmat</material>
                             </materials>
                         </data>
@@ -96,9 +130,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.0099999998</x>
-                                <y>0.0099999998</y>
-                                <z>0.0099999998</z>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
                             </scale>
                         </data>
                     </component>
@@ -116,6 +150,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Architecture\LevelMap_03.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -123,7 +164,7 @@
                         <data>
                             <materials>
                                 <material>Materials\Map\Base_PBR.ovmat</material>
-                                <material>Materials\Map\Dark_Neon.ovmat</material>
+                                <material>Materials\Map\Neon.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -136,15 +177,15 @@
                                 <z>0</z>
                             </position>
                             <rotation>
-                                <x>-0.70710677</x>
+                                <x>0</x>
                                 <y>0</y>
                                 <z>0</z>
-                                <w>0.70710677</w>
+                                <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.0099999998</x>
-                                <y>0.0099999998</y>
-                                <z>0.0099999998</z>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
                             </scale>
                         </data>
                     </component>
@@ -162,6 +203,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Architecture\LevelMap_02.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -169,7 +217,7 @@
                         <data>
                             <materials>
                                 <material>Materials\Map\Base_PBR.ovmat</material>
-                                <material>Materials\Map\Dark_Neon.ovmat</material>
+                                <material>Materials\Map\Neon.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -182,15 +230,15 @@
                                 <z>0</z>
                             </position>
                             <rotation>
-                                <x>-0.70710677</x>
+                                <x>0</x>
                                 <y>0</y>
                                 <z>0</z>
-                                <w>0.70710677</w>
+                                <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.0099999998</x>
-                                <y>0.0099999998</y>
-                                <z>0.0099999998</z>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
                             </scale>
                         </data>
                     </component>
@@ -322,7 +370,7 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Lamp 1</name>
+                <name>Neon 1</name>
                 <tag></tag>
                 <active>true</active>
                 <id>25</id>
@@ -367,7 +415,7 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Lamp 2</name>
+                <name>Neon 2</name>
                 <tag></tag>
                 <active>true</active>
                 <id>26</id>
@@ -466,6 +514,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Architecture\SubdivPlane.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -481,7 +536,7 @@
                         <data>
                             <position>
                                 <x>24.344999</x>
-                                <y>-3.039</y>
+                                <y>-3.1107721</y>
                                 <z>2.8699999</z>
                             </position>
                             <rotation>
@@ -491,9 +546,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>10</x>
+                                <x>1000</x>
                                 <y>1</y>
-                                <z>18</z>
+                                <z>2000</z>
                             </scale>
                         </data>
                     </component>
@@ -503,7 +558,7 @@
             <actor>
                 <name>Lava Sources</name>
                 <tag></tag>
-                <active>true</active>
+                <active>false</active>
                 <id>35</id>
                 <parent>27</parent>
                 <components>
@@ -958,7 +1013,7 @@
             <actor>
                 <name>Lava 5</name>
                 <tag></tag>
-                <active>true</active>
+                <active>false</active>
                 <id>50</id>
                 <parent>49</parent>
                 <components>
@@ -2327,6 +2382,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -5119,6 +5181,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -6995,6 +7064,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -7309,12 +7385,7 @@
                         </data>
                     </component>
                 </components>
-                <behaviours>
-                    <behaviour>
-                        <type>Manager_GateSystem</type>
-                        <data/>
-                    </behaviour>
-                </behaviours>
+                <behaviours/>
             </actor>
             <actor>
                 <name>Gate 1</name>
@@ -7358,6 +7429,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Door_Left_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -7409,6 +7487,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Door_Arch_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -7416,7 +7501,7 @@
                         <data>
                             <materials>
                                 <material>Materials\Map\Base_PBR.ovmat</material>
-                                <material>Materials\Map\Neon_PBR.ovmat</material>
+                                <material>Materials\Map\Neon.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -7455,6 +7540,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Floor_Small_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -7615,7 +7707,7 @@
                         <data>
                             <materials>
                                 <material>Materials\Map\Base_PBR.ovmat</material>
-                                <material>Materials\Map\Neon_PBR.ovmat</material>
+                                <material>Materials\Map\Neon.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -7623,6 +7715,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Door_Arch_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -7839,6 +7938,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Floor_Small_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -8171,6 +8277,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Door_Left_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -8248,6 +8361,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Door_Left_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -8440,6 +8560,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Door_Left_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -8526,6 +8653,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Door_Left_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -8626,7 +8760,7 @@
                         <data>
                             <materials>
                                 <material>Materials\Map\Base_PBR.ovmat</material>
-                                <material>Materials\Map\Neon_PBR.ovmat</material>
+                                <material>Materials\Map\Neon.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -8634,6 +8768,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Door_Arch_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -8793,6 +8934,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Floor_Small_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -8887,6 +9035,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Door_Arch_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -8894,7 +9049,7 @@
                         <data>
                             <materials>
                                 <material>Materials\Map\Base_PBR.ovmat</material>
-                                <material>Materials\Map\Neon_PBR.ovmat</material>
+                                <material>Materials\Map\Neon.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -9047,6 +9202,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Floor_Small_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -9242,6 +9404,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Door_Left_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -9416,6 +9585,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Door_Left_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -9524,6 +9700,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Door_Arch_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -9684,6 +9867,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Floor_Small_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -9795,6 +9985,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Door_Arch_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -9954,6 +10151,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Floor_Small_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -10150,6 +10354,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Door_Left_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -10289,6 +10500,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Light_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -10419,6 +10637,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Light_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -10544,6 +10769,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -10590,6 +10822,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -10886,6 +11125,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Fan_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -10928,6 +11174,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Map\Separated\Fan_01.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -11082,6 +11335,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Items\Box.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -11099,9 +11359,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.1</x>
-                                <y>0.1</y>
-                                <z>0.1</z>
+                                <x>10</x>
+                                <y>10</y>
+                                <z>10</z>
                             </scale>
                         </data>
                     </component>
@@ -11127,6 +11387,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Shapes\vplane.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -11212,6 +11479,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -11372,6 +11646,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Items\Box.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -11397,9 +11678,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.1</x>
-                                <y>0.1</y>
-                                <z>0.1</z>
+                                <x>10</x>
+                                <y>10</y>
+                                <z>10</z>
                             </scale>
                         </data>
                     </component>
@@ -11508,6 +11789,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Items\Box.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -11525,9 +11813,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.1</x>
-                                <y>0.1</y>
-                                <z>0.1</z>
+                                <x>10</x>
+                                <y>10</y>
+                                <z>10</z>
                             </scale>
                         </data>
                     </component>
@@ -11616,6 +11904,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Items\PhysicsGun.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -11633,9 +11928,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.0040000002</x>
-                                <y>0.0040000002</y>
-                                <z>0.0040000002</z>
+                                <x>0.25</x>
+                                <y>0.25</y>
+                                <z>0.25</z>
                             </scale>
                         </data>
                     </component>
@@ -11791,6 +12086,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>0</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -11837,6 +12139,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Items\PhysicsGun.fbx</model>
+                            <frustum_behaviour>0</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -11856,20 +12165,20 @@
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
                             <position>
-                                <x>-0.096000001</x>
-                                <y>-0.064000003</y>
-                                <z>0.17399999</z>
+                                <x>-0.15000001</x>
+                                <y>-0.2</y>
+                                <z>0.5</z>
                             </position>
                             <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
+                                <x>-7.5497901e-08</x>
+                                <y>1</y>
+                                <z>-7.5497901e-08</z>
+                                <w>5.6999333e-15</w>
                             </rotation>
                             <scale>
-                                <x>0.001</x>
-                                <y>0.001</y>
-                                <z>0.001</z>
+                                <x>0.2</x>
+                                <y>0.2</y>
+                                <z>0.2</z>
                             </scale>
                         </data>
                     </component>
@@ -11927,6 +12236,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Sphere.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -11989,6 +12305,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Items\LavaPlatform.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -12006,9 +12329,9 @@
                                 <w>0.70710677</w>
                             </rotation>
                             <scale>
-                                <x>0.0089999996</x>
-                                <y>0.0089999996</y>
-                                <z>0.0089999996</z>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
                             </scale>
                         </data>
                     </component>
@@ -12019,49 +12342,6 @@
                         <data/>
                     </behaviour>
                 </behaviours>
-            </actor>
-            <actor>
-                <name>Emissive</name>
-                <tag></tag>
-                <active>true</active>
-                <id>302</id>
-                <parent>297</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CAmbientSphereLight</type>
-                        <data>
-                            <color>
-                                <x>0</x>
-                                <y>0.7234692</y>
-                                <z>0.87843138</z>
-                            </color>
-                            <intensity>100</intensity>
-                            <radius>0.30000001</radius>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
             </actor>
             <actor>
                 <name>Recall Source</name>
@@ -12212,6 +12492,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -12373,6 +12660,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Shapes\vplane.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -12419,10 +12713,10 @@
                         <data>
                             <materials>
                                 <material>Materials\Cargo\Empty.ovmat</material>
-                                <material>Materials\Cargo\Broken\podlaha_albedo.ovmat</material>
-                                <material>Materials\Cargo\Broken\base_ram_albedo.ovmat</material>
-                                <material>Materials\Cargo\Broken\wall_albedo.ovmat</material>
-                                <material>Materials\Cargo\Broken\Text_hangarA113.ovmat</material>
+                                <material>Materials\Cargo\podlaha_albedo.ovmat</material>
+                                <material>Materials\Cargo\base_ram_albedo.ovmat</material>
+                                <material>Materials\Cargo\wall_albedo.ovmat</material>
+                                <material>Materials\Cargo\Text_hangarA113.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -12430,6 +12724,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Cargo\Cargo.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -12447,9 +12748,9 @@
                                 <w>0.98959875</w>
                             </rotation>
                             <scale>
-                                <x>0.059999999</x>
-                                <y>0.059999999</y>
-                                <z>0.059999999</z>
+                                <x>10</x>
+                                <y>10</y>
+                                <z>10</z>
                             </scale>
                         </data>
                     </component>
@@ -12831,7 +13132,14 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -12877,6 +13185,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Shapes\vplane.fbx</model>
+                            <frustum_behaviour>0</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -12921,7 +13236,14 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -13030,14 +13352,14 @@
                         <type>class OvCore::ECS::Components::CPointLight</type>
                         <data>
                             <color>
-                                <x>0</x>
-                                <y>1</y>
-                                <z>0.89285707</z>
+                                <x>0.027450979</x>
+                                <y>0.96567458</y>
+                                <z>1</z>
                             </color>
-                            <intensity>100</intensity>
+                            <intensity>2</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
-                            <quadratic>50</quadratic>
+                            <quadratic>1</quadratic>
                         </data>
                     </component>
                     <component>
@@ -13075,6 +13397,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>0</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -13163,7 +13492,14 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -13250,6 +13586,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Decoration\AlienMaker.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -13275,9 +13618,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.0099999998</x>
-                                <y>0.0099999998</y>
-                                <z>0.0099999998</z>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
                             </scale>
                         </data>
                     </component>
@@ -13380,6 +13723,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Sphere.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -13443,7 +13793,14 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -13607,14 +13964,21 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
                             <position>
-                                <x>-0.94999999</x>
+                                <x>-0.25</x>
                                 <y>1.7</y>
                                 <z>1.9</z>
                             </position>
@@ -13702,6 +14066,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Items\EnergyTank.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -13727,9 +14098,9 @@
                                 <w>0.7077235</w>
                             </rotation>
                             <scale>
-                                <x>0.02</x>
-                                <y>0.02</y>
-                                <z>0.02</z>
+                                <x>2</x>
+                                <y>2</y>
+                                <z>2</z>
                             </scale>
                         </data>
                     </component>
@@ -13737,56 +14108,6 @@
                 <behaviours>
                     <behaviour>
                         <type>Animation_Shake</type>
-                        <data/>
-                    </behaviour>
-                </behaviours>
-            </actor>
-            <actor>
-                <name>Energy Tank Light</name>
-                <tag></tag>
-                <active>true</active>
-                <id>344</id>
-                <parent>343</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>1</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>1</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>1.9</x>
-                                <y>-12.3</y>
-                                <z>-64.550003</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours>
-                    <behaviour>
-                        <type>Animation_EnergyTankLight</type>
                         <data/>
                     </behaviour>
                 </behaviours>
@@ -13810,6 +14131,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cylinder.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -13847,6 +14175,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cylinder.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -13954,6 +14289,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cylinder.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -14007,6 +14349,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cylinder.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -14052,6 +14401,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -14089,6 +14445,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>0</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -14103,7 +14466,7 @@
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
                             <position>
-                                <x>22.034</x>
+                                <x>23.134001</x>
                                 <y>-7.8000002</y>
                                 <z>-8.6999998</z>
                             </position>
@@ -14114,7 +14477,7 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>1.8</x>
+                                <x>1.35</x>
                                 <y>1.8</y>
                                 <z>1.8</z>
                             </scale>
@@ -14240,6 +14603,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>0</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -14277,6 +14647,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Decoration\Iron_Man_Helmet.obj</model>
+                            <frustum_behaviour>0</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -14402,6 +14779,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Decoration\Iron_Man_Helmet.obj</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -14495,6 +14879,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Items\KeyCard.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -14512,9 +14903,9 @@
                                 <w>0.7077235</w>
                             </rotation>
                             <scale>
-                                <x>0.001</x>
-                                <y>0.001</y>
-                                <z>0.001</z>
+                                <x>0.1</x>
+                                <y>0.1</y>
+                                <z>0.1</z>
                             </scale>
                         </data>
                     </component>
@@ -14608,6 +14999,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Decoration\AlienMaker.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -14633,9 +15031,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.0099999998</x>
-                                <y>0.0099999998</y>
-                                <z>0.0099999998</z>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
                             </scale>
                         </data>
                     </component>
@@ -14707,6 +15105,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Sphere.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -14770,7 +15175,14 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -14816,6 +15228,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Items\Droid.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -14842,9 +15261,9 @@
                                 <w>-3.3001181e-15</w>
                             </rotation>
                             <scale>
-                                <x>0.0099999998</x>
-                                <y>0.0099999998</y>
-                                <z>0.0099999998</z>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
                             </scale>
                         </data>
                     </component>
@@ -14877,8 +15296,8 @@
                         <data>
                             <position>
                                 <x>0</x>
-                                <y>1.3</y>
-                                <z>0.76300001</z>
+                                <y>1.15</y>
+                                <z>0.56300002</z>
                             </position>
                             <rotation>
                                 <x>0</x>
@@ -14973,6 +15392,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Shapes\vplane.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -15146,6 +15572,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>0</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -15191,6 +15624,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>0</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -15228,6 +15668,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -15273,6 +15720,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>0</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -15357,6 +15811,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Decoration\AlienMaker.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -15374,9 +15835,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.0099999998</x>
-                                <y>0.0099999998</y>
-                                <z>0.0099999998</z>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
                             </scale>
                         </data>
                     </component>
@@ -15470,6 +15931,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Sphere.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -15520,6 +15988,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Shapes\vplane.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -15619,6 +16094,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Decoration\AlienMaker.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -15644,9 +16126,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.0099999998</x>
-                                <y>0.0099999998</y>
-                                <z>0.0099999998</z>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
                             </scale>
                         </data>
                     </component>
@@ -15718,6 +16200,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Sphere.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -15781,7 +16270,14 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -15858,6 +16354,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Decoration\AlienMaker.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -15883,9 +16386,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.0099999998</x>
-                                <y>0.0099999998</y>
-                                <z>0.0099999998</z>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
                             </scale>
                         </data>
                     </component>
@@ -15957,6 +16460,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Sphere.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -16020,7 +16530,14 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -16105,6 +16622,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Decoration\AlienMaker.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -16122,9 +16646,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.0099999998</x>
-                                <y>0.0099999998</y>
-                                <z>0.0099999998</z>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
                             </scale>
                         </data>
                     </component>
@@ -16218,6 +16742,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Sphere.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -16267,7 +16798,14 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -16336,6 +16874,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Decoration\AlienMaker.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -16361,9 +16906,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.0099999998</x>
-                                <y>0.0099999998</y>
-                                <z>0.0099999998</z>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
                             </scale>
                         </data>
                     </component>
@@ -16435,6 +16980,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Sphere.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -16498,7 +17050,14 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -16583,6 +17142,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Decoration\AlienMaker.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -16600,9 +17166,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.0099999998</x>
-                                <y>0.0099999998</y>
-                                <z>0.0099999998</z>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
                             </scale>
                         </data>
                     </component>
@@ -16696,6 +17262,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Sphere.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -16746,6 +17319,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Shapes\vplane.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -16833,10 +17413,10 @@
                                 <z>0</z>
                             </position>
                             <rotation>
-                                <x>0.38268346</x>
-                                <y>1.0199052e-08</y>
-                                <z>2.4622688e-08</z>
-                                <w>0.9238795</w>
+                                <x>-7.1013625e-23</x>
+                                <y>2.6645353e-15</y>
+                                <z>2.665141e-08</z>
+                                <w>1</w>
                             </rotation>
                             <scale>
                                 <x>1</x>
@@ -16872,6 +17452,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -16922,6 +17509,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>0</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -16942,6 +17536,101 @@
                                 <x>9.9999997e-05</x>
                                 <y>9.9999997e-05</y>
                                 <z>0</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>Energy Tank Light</name>
+                <tag></tag>
+                <active>true</active>
+                <id>435</id>
+                <parent>343</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CPointLight</type>
+                        <data>
+                            <color>
+                                <x>1</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </color>
+                            <intensity>1</intensity>
+                            <constant>0</constant>
+                            <linear>0</linear>
+                            <quadratic>1</quadratic>
+                        </data>
+                    </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours>
+                    <behaviour>
+                        <type>Animation_EnergyTankLight</type>
+                        <data/>
+                    </behaviour>
+                </behaviours>
+            </actor>
+            <actor>
+                <name>Lamp 1</name>
+                <tag></tag>
+                <active>true</active>
+                <id>436</id>
+                <parent>27</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CPointLight</type>
+                        <data>
+                            <color>
+                                <x>0</x>
+                                <y>0.84348392</y>
+                                <z>1</z>
+                            </color>
+                            <intensity>1</intensity>
+                            <constant>0</constant>
+                            <linear>0</linear>
+                            <quadratic>1</quadratic>
+                        </data>
+                    </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>9.9196873</x>
+                                <y>3.2750001</y>
+                                <z>1.6827838</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
                             </scale>
                         </data>
                     </component>

@@ -1,5 +1,5 @@
 <root>
-    <shader>:Shaders\StandardPBR.glsl</shader>
+    <shader>:Shaders\StandardPBR.ovfx</shader>
     <settings>
         <blendable>false</blendable>
         <backface_culling>true</backface_culling>
@@ -7,15 +7,24 @@
         <depth_test>true</depth_test>
         <depth_writing>true</depth_writing>
         <color_writing>true</color_writing>
+        <cast_shadows>false</cast_shadows>
+        <receive_shadows>false</receive_shadows>
         <gpu_instances>1</gpu_instances>
     </settings>
     <uniforms>
         <uniform>
+            <name>_LightSpaceMatrix</name>
+        </uniform>
+        <uniform>
+            <name>_ShadowMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
             <name>u_Albedo</name>
             <value>
-                <x>0.19607753</x>
-                <y>0.19607645</y>
-                <z>0.19607842</z>
+                <x>0.30196077</x>
+                <y>0.30195776</y>
+                <z>0.30195776</z>
                 <w>1</w>
             </value>
         </uniform>
@@ -32,8 +41,20 @@
             <value>0</value>
         </uniform>
         <uniform>
+            <name>u_HeightMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
+            <name>u_HeightScale</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
+            <name>u_MaskMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
             <name>u_Metallic</name>
-            <value>0.5</value>
+            <value>0.60000002</value>
         </uniform>
         <uniform>
             <name>u_MetallicMap</name>
@@ -45,7 +66,7 @@
         </uniform>
         <uniform>
             <name>u_Roughness</name>
-            <value>0.1</value>
+            <value>0.30000001</value>
         </uniform>
         <uniform>
             <name>u_RoughnessMap</name>

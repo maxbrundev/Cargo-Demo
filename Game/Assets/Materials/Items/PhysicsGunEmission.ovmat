@@ -1,5 +1,5 @@
 <root>
-    <shader>:Shaders\Unlit.glsl</shader>
+    <shader>:Shaders\StandardPBR.ovfx</shader>
     <settings>
         <blendable>true</blendable>
         <backface_culling>true</backface_culling>
@@ -7,21 +7,70 @@
         <depth_test>true</depth_test>
         <depth_writing>true</depth_writing>
         <color_writing>true</color_writing>
+        <cast_shadows>false</cast_shadows>
+        <receive_shadows>false</receive_shadows>
         <gpu_instances>1</gpu_instances>
     </settings>
     <uniforms>
         <uniform>
-            <name>u_Diffuse</name>
+            <name>_LightSpaceMatrix</name>
+        </uniform>
+        <uniform>
+            <name>_ShadowMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
+            <name>u_Albedo</name>
             <value>
-                <x>0</x>
-                <y>0.40784311</y>
-                <z>0.39344859</z>
-                <w>0.70588237</w>
+                <x>2</x>
+                <y>2</y>
+                <z>2</z>
+                <w>1</w>
             </value>
         </uniform>
         <uniform>
-            <name>u_DiffuseMap</name>
-            <value>Textures\Trigger\Metal_Plate_014_metallic.jpg</value>
+            <name>u_AlbedoMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
+            <name>u_AmbientOcclusionMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
+            <name>u_EnableNormalMapping</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
+            <name>u_HeightMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
+            <name>u_HeightScale</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
+            <name>u_MaskMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
+            <name>u_Metallic</name>
+            <value>1</value>
+        </uniform>
+        <uniform>
+            <name>u_MetallicMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
+            <name>u_NormalMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
+            <name>u_Roughness</name>
+            <value>1</value>
+        </uniform>
+        <uniform>
+            <name>u_RoughnessMap</name>
+            <value>?</value>
         </uniform>
         <uniform>
             <name>u_TextureOffset</name>
@@ -33,8 +82,8 @@
         <uniform>
             <name>u_TextureTiling</name>
             <value>
-                <x>10</x>
-                <y>10</y>
+                <x>1</x>
+                <y>1</y>
             </value>
         </uniform>
     </uniforms>

@@ -31,7 +31,7 @@ function Gameplay_LightCubeSlot:Move(deltaTime)
     self.body:GetTransform():SetPosition(Vector3.Lerp(self.body:GetTransform():GetLocalPosition(), targetPosition, 20 * deltaTime))
 end
 
-function Gameplay_LightCubeSlot:OnTriggerStart(other)
+function Gameplay_LightCubeSlot:OnTriggerEnter(other)
     self.triggerCounter = self.triggerCounter + 1
     if self.triggerCounter == 1 then
         self.activated = true
@@ -42,7 +42,7 @@ function Gameplay_LightCubeSlot:OnTriggerStart(other)
     end
 end
 
-function Gameplay_LightCubeSlot:OnTriggerStop(other)
+function Gameplay_LightCubeSlot:OnTriggerExit(other)
     self.triggerCounter = self.triggerCounter - 1
     if self.triggerCounter == 0 then
         self.activated = false

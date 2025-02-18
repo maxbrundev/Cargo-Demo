@@ -1,5 +1,5 @@
 <root>
-    <shader>Shaders\Smoke.glsl</shader>
+    <shader>Shaders\Smoke.ovfx</shader>
     <settings>
         <blendable>true</blendable>
         <backface_culling>true</backface_culling>
@@ -7,6 +7,8 @@
         <depth_test>true</depth_test>
         <depth_writing>false</depth_writing>
         <color_writing>true</color_writing>
+        <cast_shadows>false</cast_shadows>
+        <receive_shadows>false</receive_shadows>
         <gpu_instances>50</gpu_instances>
     </settings>
     <uniforms>
@@ -21,8 +23,8 @@
         <uniform>
             <name>u_CosinFrequency</name>
             <value>
-                <x>3.5799999</x>
-                <y>1</y>
+                <x>3</x>
+                <y>2</y>
                 <z>0.5</z>
             </value>
         </uniform>
@@ -32,7 +34,7 @@
                 <x>0.74509799</x>
                 <y>0.74509102</y>
                 <z>0.74509054</z>
-                <w>0.48500001</w>
+                <w>0.050000001</w>
             </value>
         </uniform>
         <uniform>

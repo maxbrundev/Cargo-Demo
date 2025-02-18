@@ -1,5 +1,5 @@
 <root>
-    <shader>Shaders\Smoke.glsl</shader>
+    <shader>Shaders\Smoke.ovfx</shader>
     <settings>
         <blendable>true</blendable>
         <backface_culling>true</backface_culling>
@@ -7,6 +7,8 @@
         <depth_test>true</depth_test>
         <depth_writing>false</depth_writing>
         <color_writing>true</color_writing>
+        <cast_shadows>false</cast_shadows>
+        <receive_shadows>false</receive_shadows>
         <gpu_instances>273</gpu_instances>
     </settings>
     <uniforms>
