@@ -12,7 +12,7 @@ local Managers_CinematicManager =
 
 function Managers_CinematicManager:OnAwake()
     self.cargoShaker = Scenes.GetCurrentScene():FindActorByName("CargoModel"):GetBehaviour("Animation_Shake")
-    self.ambientRedLight = Scenes.GetCurrentScene():FindActorByName("Ambient Red"):GetAmbientSphereLight()
+    self.ambientRedLight = Scenes.GetCurrentScene():FindActorByName("Ambient Red"):GetLight()
     self.whiteLightFirstGroup = Scenes.GetCurrentScene():FindActorsByTag("WhiteLight1")
     self.whiteLightSecondGroup = Scenes.GetCurrentScene():FindActorsByTag("WhiteLight2")
     self.cameraFadeManager = Scenes.GetCurrentScene():FindActorByName("Camera Fade Manager"):GetBehaviour("Managers_CameraFade")

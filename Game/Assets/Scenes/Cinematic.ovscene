@@ -16,6 +16,7 @@
                         <type>class OvCore::ECS::Components::CCamera</type>
                         <data>
                             <fov>50</fov>
+                            <size>-1.0737418e+08</size>
                             <near>0.1</near>
                             <far>1000</far>
                             <clear_color>
@@ -23,6 +24,32 @@
                                 <y>3.8889695e-07</y>
                                 <z>1e-06</z>
                             </clear_color>
+                            <frustum_geometry_culling>true</frustum_geometry_culling>
+                            <frustum_light_culling>true</frustum_light_culling>
+                            <projection_mode>1</projection_mode>
+                        </data>
+                    </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CPostProcessStack</type>
+                        <data>
+                            <bloom_enabled>true</bloom_enabled>
+                            <bloom_threshold>1</bloom_threshold>
+                            <bloom_radius>1</bloom_radius>
+                            <bloom_kernel_size>6</bloom_kernel_size>
+                            <bloom_intensity>0.5</bloom_intensity>
+                            <auto_exposure_enabled>true</auto_exposure_enabled>
+                            <auto_exposure_center_weight_bias>0.5</auto_exposure_center_weight_bias>
+                            <auto_exposure_luminance_min>-2</auto_exposure_luminance_min>
+                            <auto_exposure_luminance_max>16</auto_exposure_luminance_max>
+                            <auto_exposure_exposure_compensation>0</auto_exposure_exposure_compensation>
+                            <auto_exposure_progressive>true</auto_exposure_progressive>
+                            <auto_exposure_speed_up>1</auto_exposure_speed_up>
+                            <auto_exposure_speed_down>1</auto_exposure_speed_down>
+                            <tonemapping_enabled>true</tonemapping_enabled>
+                            <tonemapping_exposure>1</tonemapping_exposure>
+                            <tonemapping_mode>0</tonemapping_mode>
+                            <tonemapping_gamma_correction>true</tonemapping_gamma_correction>
+                            <fxaa_enabled>true</fxaa_enabled>
                         </data>
                     </component>
                     <component>
@@ -65,11 +92,11 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Cargo\base_door.ovmat</material>
-                                <material>Materials\Cargo\podlaha_albedo.ovmat</material>
-                                <material>Materials\Cargo\base_ram_albedo.ovmat</material>
-                                <material>Materials\Cargo\wall_albedo.ovmat</material>
-                                <material>Materials\Cargo\Text_hangarA113.ovmat</material>
+                                <material>Models\Cargo\Materials\base_door.ovmat</material>
+                                <material>Models\Cargo\Materials\podlaha_albedo.ovmat</material>
+                                <material>Models\Cargo\Materials\base_ram_albedo.ovmat</material>
+                                <material>Models\Cargo\Materials\wall_albedo.ovmat</material>
+                                <material>Models\Cargo\Materials\Text_hangarA113.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -77,6 +104,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>Models\Cargo\Cargo.FBX</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -94,9 +128,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>0.2</x>
-                                <y>0.2</y>
-                                <z>0.2</z>
+                                <x>20</x>
+                                <y>20</y>
+                                <z>20</z>
                             </scale>
                         </data>
                     </component>
@@ -107,51 +141,6 @@
                         <data/>
                     </behaviour>
                 </behaviours>
-            </actor>
-            <actor>
-                <name>Text Light</name>
-                <tag></tag>
-                <active>true</active>
-                <id>5</id>
-                <parent>6</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>0.96428573</x>
-                                <y>1</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>1</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>1</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>0</x>
-                                <y>8.8929996</y>
-                                <z>0</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
             </actor>
             <actor>
                 <name>Lights</name>
@@ -199,7 +188,7 @@
                                 <y>1</y>
                                 <z>1</z>
                             </color>
-                            <intensity>3</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>0.1</quadratic>
@@ -244,7 +233,7 @@
                                 <y>1</y>
                                 <z>1</z>
                             </color>
-                            <intensity>3</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>0.1</quadratic>
@@ -277,7 +266,7 @@
             <actor>
                 <name>Right</name>
                 <tag></tag>
-                <active>true</active>
+                <active>false</active>
                 <id>9</id>
                 <parent>6</parent>
                 <components>
@@ -320,7 +309,7 @@
                                 <y>1</y>
                                 <z>1</z>
                             </color>
-                            <intensity>2</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>0.1</quadratic>
@@ -365,7 +354,7 @@
                                 <y>1</y>
                                 <z>1</z>
                             </color>
-                            <intensity>2</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>0.1</quadratic>
@@ -500,7 +489,7 @@
                                 <y>0</y>
                                 <z>0</z>
                             </color>
-                            <intensity>3</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>0.1</quadratic>
@@ -533,7 +522,7 @@
             <actor>
                 <name>Left</name>
                 <tag></tag>
-                <active>true</active>
+                <active>false</active>
                 <id>23</id>
                 <parent>6</parent>
                 <components>
@@ -576,7 +565,7 @@
                                 <y>1</y>
                                 <z>1</z>
                             </color>
-                            <intensity>3</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>0.1</quadratic>
@@ -621,7 +610,7 @@
                                 <y>1</y>
                                 <z>1</z>
                             </color>
-                            <intensity>3</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>0.1</quadratic>
@@ -666,7 +655,7 @@
                                 <y>1</y>
                                 <z>1</z>
                             </color>
-                            <intensity>2</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>0.1</quadratic>
@@ -711,7 +700,7 @@
                                 <y>1</y>
                                 <z>1</z>
                             </color>
-                            <intensity>2</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>0.1</quadratic>
@@ -846,7 +835,7 @@
                                 <y>0</y>
                                 <z>0</z>
                             </color>
-                            <intensity>3</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>0.1</quadratic>
@@ -922,7 +911,7 @@
                                 <y>1</y>
                                 <z>1</z>
                             </color>
-                            <intensity>3</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>0.1</quadratic>
@@ -967,7 +956,7 @@
                                 <y>1</y>
                                 <z>1</z>
                             </color>
-                            <intensity>3</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>0.1</quadratic>
@@ -1012,7 +1001,7 @@
                                 <y>1</y>
                                 <z>1</z>
                             </color>
-                            <intensity>2</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>0.1</quadratic>
@@ -1057,7 +1046,7 @@
                                 <y>1</y>
                                 <z>1</z>
                             </color>
-                            <intensity>2</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>0.1</quadratic>
@@ -1135,7 +1124,7 @@
             <actor>
                 <name>Light 6</name>
                 <tag>WhiteLight2</tag>
-                <active>true</active>
+                <active>false</active>
                 <id>37</id>
                 <parent>31</parent>
                 <components>
@@ -1192,7 +1181,7 @@
                                 <y>0</y>
                                 <z>0</z>
                             </color>
-                            <intensity>3</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>0.1</quadratic>
@@ -1711,15 +1700,17 @@
                 <parent>0</parent>
                 <components>
                     <component>
-                        <type>class OvCore::ECS::Components::CAmbientSphereLight</type>
+                        <type>class OvCore::ECS::Components::CPointLight</type>
                         <data>
                             <color>
                                 <x>1</x>
                                 <y>0</y>
                                 <z>0</z>
                             </color>
-                            <intensity>0</intensity>
-                            <radius>81.599998</radius>
+                            <intensity>1</intensity>
+                            <constant>0</constant>
+                            <linear>0</linear>
+                            <quadratic>1</quadratic>
                         </data>
                     </component>
                     <component>
@@ -1727,8 +1718,8 @@
                         <data>
                             <position>
                                 <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
+                                <y>7.8587241</y>
+                                <z>35.9464</z>
                             </position>
                             <rotation>
                                 <x>0</x>
@@ -1757,13 +1748,20 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>0</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\UI\CameraWhiteFade.ovmat</material>
+                                <material>UI\UI_CameraWhiteFade.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -1809,7 +1807,14 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>Models\Primitives\vplane.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -1846,7 +1851,14 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>Models\Primitives\vplane.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -1891,7 +1903,14 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>Models\Primitives\vplane.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -1944,7 +1963,14 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>Models\Primitives\vplane.fbx</model>
+                            <frustum_behaviour>1</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>
@@ -2049,7 +2075,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\UI\CameraBlackFade.ovmat</material>
+                                <material>UI\UI_CameraBlackFade.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -2057,6 +2083,13 @@
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
                             <model>:Models\Cube.fbx</model>
+                            <frustum_behaviour>0</frustum_behaviour>
+                            <custom_bounding_sphere_position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </custom_bounding_sphere_position>
+                            <custom_bounding_sphere_radius>1</custom_bounding_sphere_radius>
                         </data>
                     </component>
                     <component>

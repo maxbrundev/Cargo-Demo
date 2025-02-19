@@ -1,0 +1,24 @@
+<root>
+    <shader>Shaders\CameraFade.ovfx</shader>
+    <settings>
+        <blendable>true</blendable>
+        <backface_culling>false</backface_culling>
+        <frontface_culling>false</frontface_culling>
+        <depth_test>true</depth_test>
+        <depth_writing>true</depth_writing>
+        <color_writing>true</color_writing>
+        <cast_shadows>false</cast_shadows>
+        <receive_shadows>false</receive_shadows>
+        <gpu_instances>1</gpu_instances>
+    </settings>
+    <uniforms>
+        <uniform>
+            <name>u_FadeColor</name>
+            <value>
+                <x>0</x>
+                <y>0</y>
+                <z>0</z>
+            </value>
+        </uniform>
+    </uniforms>
+</root>

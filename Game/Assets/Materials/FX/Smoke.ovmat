@@ -1,5 +1,5 @@
 <root>
-    <shader>Shaders\Smoke.glsl</shader>
+    <shader>Shaders\Smoke.ovfx</shader>
     <settings>
         <blendable>true</blendable>
         <backface_culling>true</backface_culling>
@@ -7,23 +7,25 @@
         <depth_test>true</depth_test>
         <depth_writing>false</depth_writing>
         <color_writing>true</color_writing>
+        <cast_shadows>false</cast_shadows>
+        <receive_shadows>false</receive_shadows>
         <gpu_instances>50</gpu_instances>
     </settings>
     <uniforms>
         <uniform>
             <name>u_CosinAmplitude</name>
             <value>
-                <x>0.5</x>
-                <y>1</y>
-                <z>0.92000002</z>
+                <x>0.25</x>
+                <y>4.0300002</y>
+                <z>1</z>
             </value>
         </uniform>
         <uniform>
             <name>u_CosinFrequency</name>
             <value>
-                <x>3.5799999</x>
-                <y>1</y>
-                <z>0.5</z>
+                <x>10</x>
+                <y>10</y>
+                <z>2</z>
             </value>
         </uniform>
         <uniform>
@@ -32,12 +34,12 @@
                 <x>0.74509799</x>
                 <y>0.74509102</y>
                 <z>0.74509054</z>
-                <w>0.48500001</w>
+                <w>0.050000001</w>
             </value>
         </uniform>
         <uniform>
             <name>u_DiffuseMap</name>
-            <value>Textures\FX\smoke-17.png</value>
+            <value>Textures\FX\smoke.png</value>
         </uniform>
         <uniform>
             <name>u_MaxHeight</name>
@@ -46,15 +48,15 @@
         <uniform>
             <name>u_Spacing</name>
             <value>
-                <x>0.30000001</x>
+                <x>0.2</x>
                 <y>0</y>
-                <z>0.49000001</z>
+                <z>0.2</z>
             </value>
         </uniform>
         <uniform>
             <name>u_TextureOffset</name>
             <value>
-                <x>1</x>
+                <x>0</x>
                 <y>0</y>
             </value>
         </uniform>
@@ -69,7 +71,7 @@
             <name>u_Velocity</name>
             <value>
                 <x>0</x>
-                <y>0.30000001</y>
+                <y>8</y>
                 <z>0</z>
             </value>
         </uniform>

@@ -13,7 +13,7 @@ local Animation_LavaPlatform =
 function Animation_LavaPlatform:OnStart()
     self.defaultPosition = self.owner:GetTransform():GetLocalPosition()
     self.destPosition = self.defaultPosition + Vector3.new(0, 4.2, 0)
-    self.shakeScript = Scenes.GetCurrentScene():FindActorByName("LavaPlatformModel"):GetBehaviour("Animation_Shake")
+    self.shakeScript = Scenes.GetCurrentScene():FindActorByName("Lava Platform Model"):GetBehaviour("Animation_Shake")
     self.audioSource = self.owner:GetAudioSource()
 end
 

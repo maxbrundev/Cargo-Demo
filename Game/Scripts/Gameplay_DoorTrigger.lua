@@ -33,7 +33,7 @@ function Gameplay_DoorTrigger:OnTriggerEnter(other)
     end
 end
 
-function Gameplay_DoorTrigger:OnTriggerStop(other)
+function Gameplay_DoorTrigger:OnTriggerExit(other)
     if other:GetOwner():GetTag() == "Player" then
         self.rightDoor:Deactivate()
         self.leftDoor:Deactivate()

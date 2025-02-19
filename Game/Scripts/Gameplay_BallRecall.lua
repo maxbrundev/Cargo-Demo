@@ -11,7 +11,7 @@ local Gameplay_BallRecall =
 }
 
 function Gameplay_BallRecall:OnStart()
-    self.elecBall = Scenes.GetCurrentScene():FindActorByName("ElecBall")
+    self.elecBall = Scenes.GetCurrentScene():FindActorByName("Energy Ball")
     self.recallAudioSource = self.owner:GetAudioSource()
     self.gunShaker = self.owner:GetParent():GetBehaviour("Animation_Shake")
     self.gunLight = self.owner:GetPointLight()

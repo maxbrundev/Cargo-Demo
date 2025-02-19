@@ -1,5 +1,5 @@
 <root>
-    <shader>Shaders\Smoke.glsl</shader>
+    <shader>Shaders\Smoke.ovfx</shader>
     <settings>
         <blendable>true</blendable>
         <backface_culling>true</backface_culling>
@@ -7,6 +7,8 @@
         <depth_test>true</depth_test>
         <depth_writing>false</depth_writing>
         <color_writing>true</color_writing>
+        <cast_shadows>false</cast_shadows>
+        <receive_shadows>false</receive_shadows>
         <gpu_instances>273</gpu_instances>
     </settings>
     <uniforms>
@@ -32,12 +34,12 @@
                 <x>1</x>
                 <y>1</y>
                 <z>1</z>
-                <w>0.057999998</w>
+                <w>0.0099999998</w>
             </value>
         </uniform>
         <uniform>
             <name>u_DiffuseMap</name>
-            <value>Textures\FX\smoke-17.png</value>
+            <value>Textures\FX\smoke.png</value>
         </uniform>
         <uniform>
             <name>u_MaxHeight</name>

@@ -23,7 +23,6 @@ function Animation_Gun:OnStart()
     self.transform = self.owner:GetTransform()
     self.playerGun = Scenes.GetCurrentScene():FindActorByName("Player Gun")
     self:Hide()
-    -- self:Show()
 end
 
 function Animation_Gun:GetMotionVelocity()
