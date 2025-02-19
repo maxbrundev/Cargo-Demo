@@ -1,5 +1,5 @@
 <root>
-    <shader>Shaders\ElecBall.ovfx</shader>
+    <shader>Shaders\FloatingParticles.ovfx</shader>
     <settings>
         <blendable>true</blendable>
         <backface_culling>true</backface_culling>

@@ -1,5 +1,5 @@
 <root>
-    <shader>Shaders\AnimatedCrosshair.ovfx</shader>
+    <shader>Shaders\Crosshair.ovfx</shader>
     <settings>
         <blendable>true</blendable>
         <backface_culling>true</backface_culling>
