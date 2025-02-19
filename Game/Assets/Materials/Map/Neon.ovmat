@@ -16,8 +16,8 @@
             <name>u_Diffuse</name>
             <value>
                 <x>0</x>
-                <y>2</y>
-                <z>2</z>
+                <y>3</y>
+                <z>4</z>
                 <w>1</w>
             </value>
         </uniform>
