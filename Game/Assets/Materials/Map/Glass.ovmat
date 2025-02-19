@@ -1,5 +1,5 @@
 <root>
-    <shader>:Shaders\Standard.ovfx</shader>
+    <shader>:Shaders\Unlit.ovfx</shader>
     <settings>
         <blendable>true</blendable>
         <backface_culling>true</backface_culling>
@@ -13,59 +13,16 @@
     </settings>
     <uniforms>
         <uniform>
-            <name>_LightSpaceMatrix</name>
-        </uniform>
-        <uniform>
-            <name>_ShadowMap</name>
-            <value>?</value>
-        </uniform>
-        <uniform>
             <name>u_Diffuse</name>
             <value>
-                <x>0.19215687</x>
-                <y>0.59215689</y>
-                <z>1</z>
-                <w>0.49019608</w>
+                <x>0.029999999</x>
+                <y>0.050000001</y>
+                <z>0.1</z>
+                <w>0.1</w>
             </value>
         </uniform>
         <uniform>
             <name>u_DiffuseMap</name>
-            <value>?</value>
-        </uniform>
-        <uniform>
-            <name>u_EnableNormalMapping</name>
-            <value>1</value>
-        </uniform>
-        <uniform>
-            <name>u_HeightMap</name>
-            <value>?</value>
-        </uniform>
-        <uniform>
-            <name>u_HeightScale</name>
-            <value>0</value>
-        </uniform>
-        <uniform>
-            <name>u_MaskMap</name>
-            <value>?</value>
-        </uniform>
-        <uniform>
-            <name>u_NormalMap</name>
-            <value>Textures\Map\Normal_01.png</value>
-        </uniform>
-        <uniform>
-            <name>u_Shininess</name>
-            <value>100</value>
-        </uniform>
-        <uniform>
-            <name>u_Specular</name>
-            <value>
-                <x>1</x>
-                <y>1</y>
-                <z>1</z>
-            </value>
-        </uniform>
-        <uniform>
-            <name>u_SpecularMap</name>
             <value>?</value>
         </uniform>
         <uniform>

@@ -60,7 +60,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Menu\StarBackground.ovmat</material>
+                                <material>Materials\UI\UI_SpaceBackground.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -112,7 +112,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Menu\Title.ovmat</material>
+                                <material>Materials\UI\Menu\UI_Title.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -177,7 +177,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Menu\StartMessage.ovmat</material>
+                                <material>Materials\UI\Menu\UI_StartMessage.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -333,7 +333,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\UI\CameraWhiteFade.ovmat</material>
+                                <material>Materials\UI\UI_CameraWhiteFade.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -398,7 +398,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\UI\CameraBlackFade.ovmat</material>
+                                <material>Materials\UI\UI_CameraBlackFade.ovmat</material>
                             </materials>
                         </data>
                     </component>
