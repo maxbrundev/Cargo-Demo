@@ -92,11 +92,11 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\Cargo\base_door.ovmat</material>
-                                <material>Materials\Cargo\podlaha_albedo.ovmat</material>
-                                <material>Materials\Cargo\base_ram_albedo.ovmat</material>
-                                <material>Materials\Cargo\wall_albedo.ovmat</material>
-                                <material>Materials\Cargo\Text_hangarA113.ovmat</material>
+                                <material>Models\Cargo\Materials\base_door.ovmat</material>
+                                <material>Models\Cargo\Materials\podlaha_albedo.ovmat</material>
+                                <material>Models\Cargo\Materials\base_ram_albedo.ovmat</material>
+                                <material>Models\Cargo\Materials\wall_albedo.ovmat</material>
+                                <material>Models\Cargo\Materials\Text_hangarA113.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -1761,7 +1761,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\UI\UI_CameraWhiteFade.ovmat</material>
+                                <material>UI\UI_CameraWhiteFade.ovmat</material>
                             </materials>
                         </data>
                     </component>
@@ -1807,7 +1807,7 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>Models\Primitives\vplane.fbx</model>
                             <frustum_behaviour>1</frustum_behaviour>
                             <custom_bounding_sphere_position>
                                 <x>0</x>
@@ -1851,7 +1851,7 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>Models\Primitives\vplane.fbx</model>
                             <frustum_behaviour>1</frustum_behaviour>
                             <custom_bounding_sphere_position>
                                 <x>0</x>
@@ -1903,7 +1903,7 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>Models\Primitives\vplane.fbx</model>
                             <frustum_behaviour>1</frustum_behaviour>
                             <custom_bounding_sphere_position>
                                 <x>0</x>
@@ -1963,7 +1963,7 @@
                     <component>
                         <type>class OvCore::ECS::Components::CModelRenderer</type>
                         <data>
-                            <model>Models\Shapes\vplane.fbx</model>
+                            <model>Models\Primitives\vplane.fbx</model>
                             <frustum_behaviour>1</frustum_behaviour>
                             <custom_bounding_sphere_position>
                                 <x>0</x>
@@ -2075,7 +2075,7 @@
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
-                                <material>Materials\UI\UI_CameraBlackFade.ovmat</material>
+                                <material>UI\UI_CameraBlackFade.ovmat</material>
                             </materials>
                         </data>
                     </component>

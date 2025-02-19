@@ -1,31 +1,29 @@
 <root>
-    <shader>Shaders\Smoke.ovfx</shader>
+    <shader>Shaders\AnimatedCrosshair.ovfx</shader>
     <settings>
         <blendable>true</blendable>
         <backface_culling>true</backface_culling>
         <frontface_culling>false</frontface_culling>
-        <depth_test>true</depth_test>
+        <depth_test>false</depth_test>
         <depth_writing>false</depth_writing>
         <color_writing>true</color_writing>
         <cast_shadows>false</cast_shadows>
         <receive_shadows>false</receive_shadows>
-        <gpu_instances>500</gpu_instances>
+        <gpu_instances>1</gpu_instances>
     </settings>
     <uniforms>
         <uniform>
-            <name>u_CosinAmplitude</name>
+            <name>offset</name>
             <value>
-                <x>2</x>
-                <y>2</y>
-                <z>2</z>
+                <x>0</x>
+                <y>0</y>
             </value>
         </uniform>
         <uniform>
-            <name>u_CosinFrequency</name>
+            <name>scale</name>
             <value>
-                <x>0.5</x>
-                <y>1</y>
-                <z>0.5</z>
+                <x>0.045000002</x>
+                <y>0.079999998</y>
             </value>
         </uniform>
         <uniform>
@@ -33,30 +31,18 @@
             <value>
                 <x>1</x>
                 <y>1</y>
-                <z>1</z>
-                <w>0.0039215689</w>
+                <z>0</z>
+                <w>1</w>
             </value>
         </uniform>
         <uniform>
             <name>u_DiffuseMap</name>
-            <value>Textures\FX\smoke.png</value>
-        </uniform>
-        <uniform>
-            <name>u_MaxHeight</name>
-            <value>7</value>
-        </uniform>
-        <uniform>
-            <name>u_Spacing</name>
-            <value>
-                <x>0.22</x>
-                <y>0</y>
-                <z>0.30000001</z>
-            </value>
+            <value>UI\Game\UI_Crosshair.png</value>
         </uniform>
         <uniform>
             <name>u_TextureOffset</name>
             <value>
-                <x>1</x>
+                <x>0</x>
                 <y>0</y>
             </value>
         </uniform>
@@ -65,14 +51,6 @@
             <value>
                 <x>1</x>
                 <y>1</y>
-            </value>
-        </uniform>
-        <uniform>
-            <name>u_Velocity</name>
-            <value>
-                <x>0</x>
-                <y>0.30000001</y>
-                <z>0</z>
             </value>
         </uniform>
     </uniforms>

@@ -9,7 +9,7 @@
         <color_writing>true</color_writing>
         <cast_shadows>false</cast_shadows>
         <receive_shadows>false</receive_shadows>
-        <gpu_instances>500</gpu_instances>
+        <gpu_instances>250</gpu_instances>
     </settings>
     <uniforms>
         <uniform>
@@ -34,7 +34,7 @@
                 <x>1</x>
                 <y>1</y>
                 <z>1</z>
-                <w>0.0039215689</w>
+                <w>0.017999999</w>
             </value>
         </uniform>
         <uniform>
@@ -48,9 +48,9 @@
         <uniform>
             <name>u_Spacing</name>
             <value>
-                <x>0.22</x>
+                <x>0.5</x>
                 <y>0</y>
-                <z>0.30000001</z>
+                <z>0.45899999</z>
             </value>
         </uniform>
         <uniform>

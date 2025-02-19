@@ -39,7 +39,7 @@
         </uniform>
         <uniform>
             <name>u_DiffuseMap</name>
-            <value>Textures\FX\smoke-17.png</value>
+            <value>Textures\FX\smoke.png</value>
         </uniform>
         <uniform>
             <name>u_MaxHeight</name>
