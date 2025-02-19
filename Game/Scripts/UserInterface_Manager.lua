@@ -17,7 +17,7 @@ local UserInterface_Manager =
 
 function UserInterface_Manager:OnAwake()
     currentScene = Scenes.GetCurrentScene()
-    self.elecBall = currentScene:FindActorByName("ElecBall")
+    self.elecBall = currentScene:FindActorByName("Energy Ball")
     self.grabber = currentScene:FindActorByName("Player Camera"):GetBehaviour("Gameplay_Grabber")
     self.crosshair = currentScene:FindActorByName("UI_Crosshair")
     self.location = currentScene:FindActorByName("UI_Location")
