@@ -54,7 +54,7 @@
         </uniform>
         <uniform>
             <name>u_Metallic</name>
-            <value>1</value>
+            <value>0.80000001</value>
         </uniform>
         <uniform>
             <name>u_MetallicMap</name>
@@ -66,7 +66,7 @@
         </uniform>
         <uniform>
             <name>u_Roughness</name>
-            <value>1</value>
+            <value>0.30000001</value>
         </uniform>
         <uniform>
             <name>u_RoughnessMap</name>

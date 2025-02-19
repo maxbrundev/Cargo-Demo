@@ -1,7 +1,7 @@
 <root>
-    <shader>:Shaders\StandardPBR.ovfx</shader>
+    <shader>:Shaders\Unlit.ovfx</shader>
     <settings>
-        <blendable>true</blendable>
+        <blendable>false</blendable>
         <backface_culling>true</backface_culling>
         <frontface_culling>false</frontface_culling>
         <depth_test>true</depth_test>
@@ -13,63 +13,16 @@
     </settings>
     <uniforms>
         <uniform>
-            <name>_LightSpaceMatrix</name>
-        </uniform>
-        <uniform>
-            <name>_ShadowMap</name>
-            <value>?</value>
-        </uniform>
-        <uniform>
-            <name>u_Albedo</name>
+            <name>u_Diffuse</name>
             <value>
-                <x>2</x>
+                <x>0</x>
                 <y>2</y>
                 <z>2</z>
                 <w>1</w>
             </value>
         </uniform>
         <uniform>
-            <name>u_AlbedoMap</name>
-            <value>?</value>
-        </uniform>
-        <uniform>
-            <name>u_AmbientOcclusionMap</name>
-            <value>?</value>
-        </uniform>
-        <uniform>
-            <name>u_EnableNormalMapping</name>
-            <value>0</value>
-        </uniform>
-        <uniform>
-            <name>u_HeightMap</name>
-            <value>?</value>
-        </uniform>
-        <uniform>
-            <name>u_HeightScale</name>
-            <value>0</value>
-        </uniform>
-        <uniform>
-            <name>u_MaskMap</name>
-            <value>?</value>
-        </uniform>
-        <uniform>
-            <name>u_Metallic</name>
-            <value>1</value>
-        </uniform>
-        <uniform>
-            <name>u_MetallicMap</name>
-            <value>?</value>
-        </uniform>
-        <uniform>
-            <name>u_NormalMap</name>
-            <value>?</value>
-        </uniform>
-        <uniform>
-            <name>u_Roughness</name>
-            <value>1</value>
-        </uniform>
-        <uniform>
-            <name>u_RoughnessMap</name>
+            <name>u_DiffuseMap</name>
             <value>?</value>
         </uniform>
         <uniform>

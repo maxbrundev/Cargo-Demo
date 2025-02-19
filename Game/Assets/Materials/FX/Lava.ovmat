@@ -22,7 +22,7 @@
         <uniform>
             <name>u_Albedo</name>
             <value>
-                <x>10</x>
+                <x>4</x>
                 <y>1</y>
                 <z>1</z>
                 <w>1</w>
@@ -94,7 +94,7 @@
         <uniform>
             <name>u_TextureTiling</name>
             <value>
-                <x>10</x>
+                <x>5</x>
                 <y>10</y>
             </value>
         </uniform>
