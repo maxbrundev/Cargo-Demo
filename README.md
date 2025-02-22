@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/maxbrundev/Cargo-Demo/releases">Releases</a> |
+  <a href="https://github.com/Overload-Technologies/Cargo-Demo/releases">Releases</a> |
   <a href="#screenshots">Screenshots</a> |
-  <a href="https://github.com/adriengivry/Overload">Overload Engine</a>
+  <a href="https://github.com/Overload-Technologies/Overload">Overload Engine</a>
 <br/>
 
 # Cargo: A Demo Game Built with Overload Engine
