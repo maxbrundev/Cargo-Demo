@@ -3,6 +3,10 @@ local Controller_FPSController =
     currentWalkSpeed        = 1.0,
     currentRunSpeed         = 1.0,
     currentJumpStrength     = 1.0,
+    currentCameraFOV        = 55.0,
+    walkingFOV              = 55.0,
+    runningFOV              = 60.0,
+    fovTransitionSpeed      = 10,
     readyToGo               = false,
     walkSpeed               = 3.5,
     runSpeed                = 5.5,
@@ -11,7 +15,8 @@ local Controller_FPSController =
     mouseLook               = Vector2.new(180, -20),
     previousMouse           = Vector2.new(0, 0),
     firstMouse              = true,
-    camera                   = nil,
+    camera                  = nil,
+    CameraComponent         = nil,
     mouseLocked             = true,
     isGrounded              = false,
     breathScript            = nil,
@@ -24,8 +29,12 @@ local Controller_FPSController =
 
 function Controller_FPSController:OnAwake()
     self.camera = Scenes.GetCurrentScene():FindActorByName("Player Camera")
+    self.CameraComponent = self.camera:GetCamera()
     self.physicalCapsule = self.owner:GetPhysicalCapsule()
     self.ballRecall = Scenes.GetCurrentScene():FindActorByName("Recall Source"):GetBehaviour("Gameplay_BallRecall")
+
+    self.currentCameraFOV = self.CameraComponent:GetFov()
+    self.walkingFOV = self.currentCameraFOV
 end
 
 function Controller_FPSController:OnStart()
@@ -55,6 +64,8 @@ function Controller_FPSController:OnUpdate(deltaTime)
     end
     
     self:CheckGround()
+
+    self:UpdateCameraFOV(deltaTime)
 
     -- Handle mouse and keyboard only if mouse is locked
     if self.mouseLocked then
@@ -182,6 +193,16 @@ function Controller_FPSController:CheckGround()
         self.isGrounded = true
     else
         self.isGrounded = false
+    end
+end
+
+function Controller_FPSController:UpdateCameraFOV(deltaTime)
+    local targetFOV = self.running and self.runningFOV or self.walkingFOV
+
+    self.currentCameraFOV = Math.Lerp(self.currentCameraFOV, targetFOV, self.fovTransitionSpeed * deltaTime)
+
+    if self.CameraComponent then
+        self.CameraComponent:SetFov(self.currentCameraFOV)
     end
 end
 
